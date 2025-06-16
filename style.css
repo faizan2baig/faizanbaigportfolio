@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Custom Coffee Color Palette */
+.bg-coffee-50 { background-color: #f8f4ee; }
+.bg-coffee-100 { background-color: #f0e6d8; }
+.bg-coffee-200 { background-color: #e8d8c2; }
+.bg-coffee-300 { background-color: #d4b999; }
+.bg-coffee-400 { background-color: #c09a70; }
+.bg-coffee-500 { background-color: #ac7b47; }
+.bg-coffee-600 { background-color: #8a6339; }
+.bg-coffee-700 { background-color: #684a2b; }
+.bg-coffee-800 { background-color: #46321c; }
+.bg-coffee-900 { background-color: #24190e; }
+
+.text-coffee-50 { color: #f8f4ee; }
+.text-coffee-100 { color: #f0e6d8; }
+.text-coffee-200 { color: #e8d8c2; }
+.text-coffee-300 { color: #d4b999; }
+.text-coffee-400 { color: #c09a70; }
+.text-coffee-500 { color: #ac7b47; }
+.text-coffee-600 { color: #8a6339; }
+.text-coffee-700 { color: #684a2b; }
+.text-coffee-800 { color: #46321c; }
+.text-coffee-900 { color: #24190e; }
+
+.border-coffee-300 { border-color: #d4b999; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Tech Icons */
+.tech-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.tech-icon:hover {
+    transform: translateY(-5px);
+}
+
+.tech-icon span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Mobile Menu Animation */
+#mobileMenu {
+    transition: all 0.3s ease;
+}
+
+/* Project Card Hover Effect */
+.shadow-xl {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shadow-xl:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Form Input Focus */
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 2px rgba(172, 123, 71, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tech-icon {
+        width: 25%;
+    }
+}

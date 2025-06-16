@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizan Baig | Full Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @importurl('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        /* Custom Coffee Color Palette */
+        .bg-coffee-50 {
+            background-color: #f8f4ee;
+        }
+
+        .bg-coffee-100 {
+            background-color: #f0e6d8;
+        }
+
+        .bg-coffee-200 {
+            background-color: #e8d8c2;
+        }
+
+        .bg-coffee-300 {
+            background-color: #d4b999;
+        }
+
+        .bg-coffee-400 {
+            background-color: #c09a70;
+        }
+
+        .bg-coffee-500 {
+            background-color: #ac7b47;
+        }
+
+        .bg-coffee-600 {
+            background-color: #8a6339;
+        }
+
+        .bg-coffee-700 {
+            background-color: #684a2b;
+        }
+
+        .bg-coffee-800 {
+            background-color: #46321c;
+        }
+
+        .bg-coffee-900 {
+            background-color: #24190e;
+        }
+
+        .text-coffee-50 {
+            color: #f8f4ee;
+        }
+
+        .text-coffee-100 {
+            color: #f0e6d8;
+        }
+
+        .text-coffee-200 {
+            color: #e8d8c2;
+        }
+
+        .text-coffee-300 {
+            color: #d4b999;
+        }
+
+        .text-coffee-400 {
+            color: #c09a70;
+        }
+
+        .text-coffee-500 {
+            color: #ac7b47;
+        }
+
+        .text-coffee-600 {
+            color: #8a6339;
+        }
+
+        .text-coffee-700 {
+            color: #684a2b;
+        }
+
+        .text-coffee-800 {
+            color: #46321c;
+        }
+
+        .text-coffee-900 {
+            color: #24190e;
+        }
+
+        .border-coffee-300 {
+            border-color: #d4b999;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .tech-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .tech-icon:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-icon span {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(36, 25, 14, 0.95) 0%, rgba(70, 50, 28, 0.95) 100%),
+                url('assets/coffee-code-bg.jpg') center/cover no-repeat;
+        }
+
+        .nav-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 15px rgba(172, 123, 71, 0.6);
+        }
+    </style>
+</head>
+
+<body class="bg-coffee-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-coffee-900 text-coffee-50 p-4 sticky top-0 z-50 nav-shadow">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-bold flex items-center">
+                    <span class="bg-coffee-600 text-white p-2 rounded-lg mr-2">
+                        <i class="fas fa-code"></i>
+                    </span>
+                    <span>FaizanDev</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-coffee-300 transition-colors font-medium">Home</a>
+                <a href="#skills" class="hover:text-coffee-300 transition-colors font-medium">Skills</a>
+                <a href="#projects" class="hover:text-coffee-300 transition-colors font-medium">Projects</a>
+                <a href="#about" class="hover:text-coffee-300 transition-colors font-medium">About</a>
+                <a href="#contact" class="hover:text-coffee-300 transition-colors font-medium">Contact</a>
+            </div>
+            <button class="md:hidden text-xl focus:outline-none" id="menuBtn">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-coffee-800" id="mobileMenu">
+            <div class="flex flex-col space-y-3 p-4">
+                <a href="#home" class="hover:text-coffee-300 transition-colors">Home</a>
+                <a href="#skills" class="hover:text-coffee-300 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-coffee-300 transition-colors">Projects</a>
+                <a href="#about" class="hover:text-coffee-300 transition-colors">About</a>
+                <a href="#contact" class="hover:text-coffee-300 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Professional Hero Section -->
+    <section id="home" class="hero-gradient text-coffee-50 py-24 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Full Stack Developer<br>
+                    <span class="text-coffee-300">With a Passion for Clean Code</span>
+                </h1>
+                <p class="text-xl mb-8 text-coffee-200 max-w-lg">
+                    I build responsive, performant web applications using modern technologies.
+                    Currently specializing in Vue.js, Django, and Blockchain solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact"
+                        class="bg-coffee-500 hover:bg-coffee-600 text-white px-8 py-3 rounded-lg font-semibold text-center transition-all duration-300 btn-glow">
+                        Get In Touch
+                    </a>
+                    <a href="assets/resume.pdf" download
+                        class="border-2 border-coffee-300 hover:bg-coffee-300 hover:text-coffee-900 text-coffee-300 px-8 py-3 rounded-lg font-semibold text-center transition-all duration-300">
+                        <i class="fas fa-download mr-2"></i>Download CV
+                    </a>
+                </div>
+                <div class="mt-8 flex space-x-4">
+                    <a href="https://www.linkedin.com/in/faizan-baig-bb7377264" target="_blank"
+                        class="text-coffee-300 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/faizan2baig" target="_blank"
+                        class="text-coffee-300 hover:text-white transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="mailto:faizan2baig@gmail.com" class="text-coffee-300 hover:text-white transition-colors">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <!-- Changed: from rounded-full to rounded-2xl & taller height -->
+                    <div
+                        class="w-64 h-100 md:w-80 md:h-[28rem] rounded-2xl overflow-hidden border-4 border-coffee-500 shadow-xl">
+                        <img src="assets/profile.jpg" alt="Faizan Baig" class="w-full h-full object-cover">
+                    </div>
+                    <!-- No change here -->
+                    <div class="absolute -bottom-4 -right-4 bg-coffee-700 text-white px-4 py-2 rounded-lg shadow-lg">
+                        <span class="font-bold">Faizan Baig</span>
+                        <div class="text-xs">Full Stack Developer</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-coffee-800 text-coffee-50 py-12">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-coffee-700 rounded-lg shadow-md">
+                    <div class="text-4xl font-bold mb-2 flex items-center justify-center">
+                        <i class="fas fa-bolt text-coffee-300 mr-2"></i>
+                        <span>1 Hour</span>
+                    </div>
+                    <div class="text-coffee-300 uppercase tracking-wider text-sm">Avg Response Time</div>
+                </div>
+                <div class="text-center p-6 bg-coffee-700 rounded-lg shadow-md">
+                    <div class="text-4xl font-bold mb-2 flex items-center justify-center">
+                        <i class="fas fa-project-diagram text-coffee-300 mr-2"></i>
+                        <span>5+</span>
+                    </div>
+                    <div class="text-coffee-300 uppercase tracking-wider text-sm">Projects Completed</div>
+                </div>
+                <div class="text-center p-6 bg-coffee-700 rounded-lg shadow-md">
+                    <div class="text-4xl font-bold mb-2 flex items-center justify-center">
+                        <i class="fas fa-mug-hot text-coffee-300 mr-2"></i>
+                        <span>100+</span>
+                    </div>
+                    <div class="text-coffee-300 uppercase tracking-wider text-sm">Cups of Coffee</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services/Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-coffee-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-coffee-900">What I Can Do For You</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-coffee-500 text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-coffee-900">Web Development</h3>
+                    <p class="text-coffee-700">Building websites that don't just work, but actually look good too (I
+                        promise!). Using modern tools like Vue.js, Django, and Flask.</p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-coffee-500 text-4xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-coffee-900">Responsive Design</h3>
+                    <p class="text-coffee-700">Making sure your site looks great whether you're on a giant monitor or
+                        squinting at a phone screen.</p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-coffee-500 text-4xl mb-4">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-coffee-900">AI Integration</h3>
+                    <p class="text-coffee-700">Leveraging my AI internship experience to build smart features into your
+                        applications.</p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-coffee-500 text-4xl mb-4">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-coffee-900">Blockchain</h3>
+                    <p class="text-coffee-700">Developing decentralized applications with smart contracts for secure,
+                        transparent solutions.</p>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-coffee-500 text-4xl mb-4">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-coffee-900">Backend Development</h3>
+                    <p class="text-coffee-700">Building robust server-side applications with Django, Laravel, and Flask.
+                    </p>
+                </div>
+
+                <!-- Skill 6 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-coffee-500 text-4xl mb-4">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-coffee-900">Database Design</h3>
+                    <p class="text-coffee-700">Creating efficient data structures and optimized queries for your
+                        applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-coffee-700 text-coffee-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+
+            <!-- Project 1 -->
+            <div class="flex flex-col md:flex-row mb-16 bg-coffee-800 rounded-lg overflow-hidden shadow-xl">
+                <div class="md:w-1/2 p-6">
+                    <h3 class="text-2xl font-bold mb-2">Robo Promo</h3>
+                    <p class="text-coffee-300 mb-4">AI-Powered Marketing Automation Platform</p>
+                    <p class="mb-4">Automated video creation and ad campaign management with optimized audience
+                        targeting using reinforcement learning.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">Generative AI</span>
+                        <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">Django</span>
+                        <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">Meta Ads API</span>
+                        <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">RPA</span>
+                    </div>
+                    <a href="https://github.com/faizan2baig" target="_blank"
+                        class="inline-block bg-coffee-500 hover:bg-coffee-600 text-white px-4 py-2 rounded-lg">View on
+                        GitHub</a>
+                </div>
+                <div class="md:w-1/2">
+                    <!-- Replaced placeholder with your actual image -->
+                    <div class="h-full w-full">
+                        <img src="assets/WhatsApp Image 2025-06-16 at 17.16.17_3d83cd1b.jpg"
+                            alt="Robo Promo Project Screenshot" class="w-full h-full object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="flex flex-col md:flex-row mb-16 bg-coffee-800 rounded-lg overflow-hidden shadow-xl">
+                <div class="md:w-1/2 order-2 p-6">
+                    <h3 class="text-2xl font-bold mb-2">Blockchain-Based Voting System</h3>
+                    <p class="text-coffee-300 mb-4">Secure E-Voting Platform</p>
+                    <p class="mb-4">Developed a decentralized voting system with blockchain that ensures transparency
+                        and security using smart contracts.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">Laravel</span>
+                        <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">Blockchain</span>
+                        <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">Python</span>
+                    </div>
+                    <a href="https://github.com/faizan2baig" target="_blank"
+                        class="inline-block bg-coffee-500 hover:bg-coffee-600 text-white px-4 py-2 rounded-lg">View on
+                        GitHub</a>
+                </div>
+                <div class="md:w-1/2 order-1">
+                    <img src="C:\Users\faiza\Documents\portfolio-website\assets\3.jpg"
+                        alt="Blockchain-Based Voting System Screenshot" class="w-full h-full object-cover" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+       <!-- Project 3 -->
+<div class="flex flex-col md:flex-row bg-coffee-800 rounded-lg overflow-hidden shadow-xl">
+    <div class="md:w-1/2 p-6">
+        <h3 class="text-2xl font-bold mb-2">Event Management System</h3>
+        <p class="text-coffee-300 mb-4">Web-based Event Platform</p>
+        <p class="mb-4">Designed a platform for event creation, management, and registration with user
+            authentication and payment gateways.</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">Django</span>
+            <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">Python</span>
+            <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">JavaScript</span>
+            <span class="bg-coffee-600 px-3 py-1 rounded-full text-sm">Bootstrap</span>
+        </div>
+        <a href="https://github.com/faizan2baig" target="_blank"
+            class="inline-block bg-coffee-500 hover:bg-coffee-600 text-white px-4 py-2 rounded-lg">View on
+            GitHub</a>
+    </div>
+    <div class="md:w-1/2">
+        <!-- Replaced placeholder with your actual image -->
+        <div class="h-full w-full">
+            <img 
+                src="assets/1" 
+                alt="Event Management System Screenshot"
+                class="w-full h-full object-cover"
+                loading="lazy"
+            >
+        </div>
+    </div>
+</div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-coffee-100">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6 text-coffee-900">Hi, I'm Faizan!</h2>
+                    <p class="text-lg mb-4 text-coffee-800">I'm a fresh Computer Science graduate from UET Lahore,
+                        passionate about web development, AI, and blockchain technologies. What I lack in years of
+                        experience I make up for in enthusiasm, quick learning, and a genuine love for coding.</p>
+                    <p class="text-lg mb-6 text-coffee-800">When I'm not wrestling with CSS or high-fiving my computer
+                        for making code work, you can find me drinking coffee or brainstorming my next project.</p>
+
+                    <div class="mb-6">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-check text-coffee-600 mr-2"></i>
+                            <span class="text-coffee-800">Transparent about my skill level (no fake experts here)</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-check text-coffee-600 mr-2"></i>
+                            <span class="text-coffee-800">Quick learner who loves tackling new challenges</span>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-check text-coffee-600 mr-2"></i>
+                            <span class="text-coffee-800">Affordable rates for fellow beginners and small
+                                businesses</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check text-coffee-600 mr-2"></i>
+                            <span class="text-coffee-800">Actually respond to messages (shocking, I know)</span>
+                        </div>
+                    </div>
+
+                    <a href="assets/resume.pdf" download="FaizanBaig_Resume.pdf"
+                        class="inline-block bg-coffee-600 hover:bg-coffee-700 text-white px-6 py-3 rounded-lg font-semibold">
+                        <i class="fas fa-download mr-2"></i>Download Resume
+                    </a>
+                </div>
+
+                <div class="md:w-1/2 bg-coffee-200 p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-coffee-900 text-center">Fun Facts About Me</h3>
+
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold mb-2 text-coffee-800 flex items-center">
+                            <i class="fas fa-coffee mr-2 text-coffee-600"></i>Coffee Consumption
+                        </h4>
+                        <p class="text-coffee-700">Can debug code and make terrible puns at 3x speed when caffeinated.
+                        </p>
+                    </div>
+
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold mb-2 text-coffee-800 flex items-center">
+                            <i class="fas fa-bug mr-2 text-coffee-600"></i>Bug Battles
+                        </h4>
+                        <p class="text-coffee-700">Have stared down countless bugs (the code kind) and lived to tell the
+                            tale.</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2 text-coffee-800 flex items-center">
+                            <i class="fas fa-trophy mr-2 text-coffee-600"></i>Hackathon Champion
+                        </h4>
+                        <p class="text-coffee-700">Active participant in university hackathons, winning AI and
+                            blockchain challenges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="py-16 px-4 bg-coffee-800 text-coffee-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">My Current Tech Stack</h2>
+            <p class="text-center text-coffee-300 mb-12 max-w-2xl mx-auto">The tools I'm using right now (always adding
+                more to my collection)</p>
+
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="tech-icon">
+                    <i class="fab fa-vuejs text-5xl"></i>
+                    <span>Vue.js</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-python text-5xl"></i>
+                    <span>Python</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-js text-5xl"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-laravel text-5xl"></i>
+                    <span>Laravel</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-database text-5xl"></i>
+                    <span>Django</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-html5 text-5xl"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-css3-alt text-5xl"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-git-alt text-5xl"></i>
+                    <span>Git</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-docker text-5xl"></i>
+                    <span>Docker</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-ethereum text-5xl"></i>
+                    <span>Blockchain</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-coffee-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-coffee-900">Let's Chat!</h2>
+            <p class="text-center text-coffee-800 max-w-2xl mx-auto mb-12">Have a project in mind or just want to talk
+                code? I promise I don't bite (unless you're a particularly nasty bug in my code).</p>
+
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <form id="contactForm" action="https://formsubmit.co/faizan2baig@gmail.com" method="POST"
+                        class="bg-white p-8 rounded-lg shadow-lg">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New message from your portfolio">
+                        <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+                        <!-- Replace with your actual thank you page -->
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="mb-4">
+                            <label for="name" class="block text-coffee-800 mb-2">Your Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-2 border border-coffee-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-coffee-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-coffee-800 mb-2">Your Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-2 border border-coffee-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-coffee-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-coffee-800 mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-2 border border-coffee-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-coffee-500"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-coffee-600 hover:bg-coffee-700 text-white px-6 py-3 rounded-lg font-semibold">Send
+                            Message</button>
+                    </form>
+                </div>
+
+                <div class="md:w-1/2">
+                    <div class="bg-coffee-800 text-coffee-50 p-8 rounded-lg shadow-lg h-full">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-2 flex items-center">
+                                <i class="fas fa-envelope mr-3 text-coffee-300"></i>Email Me
+                            </h4>
+                            <a href="mailto:faizan2baig@gmail.com"
+                                class="text-coffee-300 hover:text-white">faizan2baig@gmail.com</a>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-2 flex items-center">
+                                <i class="fas fa-phone-alt mr-3 text-coffee-300"></i>Call/WhatsApp
+                            </h4>
+                            <a href="tel:+923354176918" class="text-coffee-300 hover:text-white">+92 335 4176918</a>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-2 flex items-center">
+                                <i class="fab fa-linkedin-in mr-3 text-coffee-300"></i>LinkedIn
+                            </h4>
+                            <a href="https://www.linkedin.com/in/faizan-baig-bb7377264" target="_blank"
+                                class="text-coffee-300 hover:text-white">linkedin.com/in/faizan-baig-bb7377264</a>
+                        </div>
+
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold mb-2 flex items-center">
+                                <i class="fab fa-github mr-3 text-coffee-300"></i>GitHub
+                            </h4>
+                            <a href="https://github.com/faizan2baig" target="_blank"
+                                class="text-coffee-300 hover:text-white">github.com/faizan2baig</a>
+                        </div>
+
+                        <div class="mt-8">
+                            <h4 class="text-lg font-semibold mb-4">Connect With Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.linkedin.com/in/faizan-baig-bb7377264" target="_blank"
+                                    class="bg-coffee-700 hover:bg-coffee-600 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/faizan2baig" target="_blank"
+                                    class="bg-coffee-700 hover:bg-coffee-600 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="mailto:faizan2baig@gmail.com"
+                                    class="bg-coffee-700 hover:bg-coffee-600 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="tel:+923354176918"
+                                    class="bg-coffee-700 hover:bg-coffee-600 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-phone-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-coffee-900 text-coffee-50 py-8 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-2xl font-bold">FaizanDev</a>
+                    <p class="text-coffee-400 mt-1">© 2023 FaizanDev. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="hover:text-coffee-300">Home</a>
+                    <a href="#skills" class="hover:text-coffee-300">Skills</a>
+                    <a href="#projects" class="hover:text-coffee-300">Projects</a>
+                    <a href="#about" class="hover:text-coffee-300">About</a>
+                    <a href="#contact" class="hover:text-coffee-300">Contact</a>
+                </div>
+            </div>
+            <div class="mt-6 text-center text-coffee-400">
+                <p>Made with <i class="fas fa-heart text-coffee-500"></i> and <i
+                        class="fas fa-coffee text-coffee-500"></i> in Lahore, Pakistan</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
